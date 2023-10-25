@@ -35,6 +35,24 @@ Class | Method | HTTP request | Description
 *AuthApi* | [**api_auth_verify_email_post**](docs/AuthApi.md#api_auth_verify_email_post) | **POST** /Api/Auth/VerifyEmail | Verify a user's email address
 *FeedItemsApi* | [**api_feed_items_get**](docs/FeedItemsApi.md#api_feed_items_get) | **GET** /Api/FeedItems | Get a list of all feed items
 *GradesApi* | [**api_grades_get**](docs/GradesApi.md#api_grades_get) | **GET** /Api/Grades | Get a list of the current user's grades
+*ImageVotingChoicesApi* | [**api_image_voting_choices_get**](docs/ImageVotingChoicesApi.md#api_image_voting_choices_get) | **GET** /Api/ImageVotingChoices | Get a list of all image voting choices
+*ImageVotingChoicesApi* | [**api_image_voting_choices_id_get**](docs/ImageVotingChoicesApi.md#api_image_voting_choices_id_get) | **GET** /Api/ImageVotingChoices/{id} | Get information about an image voting choice
+*ImageVotingEntriesApi* | [**api_image_voting_entries_get**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_get) | **GET** /Api/ImageVotingEntries | Get a list of all image voting entries
+*ImageVotingEntriesApi* | [**api_image_voting_entries_id_choose_post**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_id_choose_post) | **POST** /Api/ImageVotingEntries/{id}/Choose | Choose an image voting entry (single choice image votings only)
+*ImageVotingEntriesApi* | [**api_image_voting_entries_id_delete**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_id_delete) | **DELETE** /Api/ImageVotingEntries/{id} | Delete an image voting entry
+*ImageVotingEntriesApi* | [**api_image_voting_entries_id_get**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_id_get) | **GET** /Api/ImageVotingEntries/{id} | Get information about an image voting entry
+*ImageVotingEntriesApi* | [**api_image_voting_entries_id_patch**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_id_patch) | **PATCH** /Api/ImageVotingEntries/{id} | Update an image voting entry
+*ImageVotingEntriesApi* | [**api_image_voting_entries_id_unchoose_post**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_id_unchoose_post) | **POST** /Api/ImageVotingEntries/{id}/Unchoose | Unchoose an image voting entry (single choice image votings only)
+*ImageVotingEntriesApi* | [**api_image_voting_entries_post**](docs/ImageVotingEntriesApi.md#api_image_voting_entries_post) | **POST** /Api/ImageVotingEntries | Create an image voting entry
+*ImageVotingEntryImagesApi* | [**api_image_voting_entry_images_get**](docs/ImageVotingEntryImagesApi.md#api_image_voting_entry_images_get) | **GET** /Api/ImageVotingEntryImages | List all images of an image voting
+*ImageVotingEntryImagesApi* | [**api_image_voting_entry_images_id_delete**](docs/ImageVotingEntryImagesApi.md#api_image_voting_entry_images_id_delete) | **DELETE** /Api/ImageVotingEntryImages/{id} | Delete an image meant for an image voting entry
+*ImageVotingEntryImagesApi* | [**api_image_voting_entry_images_post**](docs/ImageVotingEntryImagesApi.md#api_image_voting_entry_images_post) | **POST** /Api/ImageVotingEntryImages | Upload an image to be used in an image voting entry
+*ImageVotingsApi* | [**api_image_votings_get**](docs/ImageVotingsApi.md#api_image_votings_get) | **GET** /Api/ImageVotings | Get a list of image votings
+*ImageVotingsApi* | [**api_image_votings_id_delete**](docs/ImageVotingsApi.md#api_image_votings_id_delete) | **DELETE** /Api/ImageVotings/{id} | Delete an image voting
+*ImageVotingsApi* | [**api_image_votings_id_get**](docs/ImageVotingsApi.md#api_image_votings_id_get) | **GET** /Api/ImageVotings/{id} | Get information about an image voting
+*ImageVotingsApi* | [**api_image_votings_id_patch**](docs/ImageVotingsApi.md#api_image_votings_id_patch) | **PATCH** /Api/ImageVotings/{id} | Update an image voting
+*ImageVotingsApi* | [**api_image_votings_id_results_get**](docs/ImageVotingsApi.md#api_image_votings_id_results_get) | **GET** /Api/ImageVotings/{id}/Results | Get results of an image voting
+*ImageVotingsApi* | [**api_image_votings_post**](docs/ImageVotingsApi.md#api_image_votings_post) | **POST** /Api/ImageVotings | Create a new image voting
 *ImportApi* | [**api_import_grades_user_id_post**](docs/ImportApi.md#api_import_grades_user_id_post) | **POST** /Api/Import/Grades/{userId} | Import grades for a user
 *ImportApi* | [**api_import_reset_key_password_put**](docs/ImportApi.md#api_import_reset_key_password_put) | **PUT** /Api/Import/ResetKeyPassword | Set the reset key password
 *ImportApi* | [**api_import_users_get**](docs/ImportApi.md#api_import_users_get) | **GET** /Api/Import/Users | Get a list of all users for grade importing
@@ -43,6 +61,8 @@ Class | Method | HTTP request | Description
 *ImportKeysApi* | [**api_import_keys_id_get**](docs/ImportKeysApi.md#api_import_keys_id_get) | **GET** /Api/ImportKeys/{id} | Get information about an import key
 *ImportKeysApi* | [**api_import_keys_id_patch**](docs/ImportKeysApi.md#api_import_keys_id_patch) | **PATCH** /Api/ImportKeys/{id} | Update an import key
 *ImportKeysApi* | [**api_import_keys_post**](docs/ImportKeysApi.md#api_import_keys_post) | **POST** /Api/ImportKeys | Create a new import key
+*LoloRequestCreatedNotifiersApi* | [**api_lolo_request_created_notifiers_get**](docs/LoloRequestCreatedNotifiersApi.md#api_lolo_request_created_notifiers_get) | **GET** /Api/LoloRequestCreatedNotifiers | Get a list of all emails to notify when a lolo request is created
+*LoloRequestCreatedNotifiersApi* | [**api_lolo_request_created_notifiers_put**](docs/LoloRequestCreatedNotifiersApi.md#api_lolo_request_created_notifiers_put) | **PUT** /Api/LoloRequestCreatedNotifiers | Update the list of emails to notify when a lolo request is created
 *LoloRequestsApi* | [**api_lolo_requests_get**](docs/LoloRequestsApi.md#api_lolo_requests_get) | **GET** /Api/LoloRequests | Get a list of all lolo requests
 *LoloRequestsApi* | [**api_lolo_requests_id_delete**](docs/LoloRequestsApi.md#api_lolo_requests_id_delete) | **DELETE** /Api/LoloRequests/{id} | Delete a lolo request
 *LoloRequestsApi* | [**api_lolo_requests_id_get**](docs/LoloRequestsApi.md#api_lolo_requests_id_get) | **GET** /Api/LoloRequests/{id} | Get information about a lolo request
@@ -107,6 +127,37 @@ Class | Method | HTTP request | Description
  - [AuthViewControlResponseUser](docs/AuthViewControlResponseUser.md)
  - [AuthViewUserGroupResponse](docs/AuthViewUserGroupResponse.md)
  - [FeedIndexFeedItemsResponse](docs/FeedIndexFeedItemsResponse.md)
+ - [ImageVotingsChooseImageVotingEntryRequestBody](docs/ImageVotingsChooseImageVotingEntryRequestBody.md)
+ - [ImageVotingsCreateImageVotingEntryRequestBody](docs/ImageVotingsCreateImageVotingEntryRequestBody.md)
+ - [ImageVotingsCreateImageVotingEntryResponse](docs/ImageVotingsCreateImageVotingEntryResponse.md)
+ - [ImageVotingsCreateImageVotingRequestBody](docs/ImageVotingsCreateImageVotingRequestBody.md)
+ - [ImageVotingsCreateImageVotingRequestBodyImageVotingAspect](docs/ImageVotingsCreateImageVotingRequestBodyImageVotingAspect.md)
+ - [ImageVotingsCreateImageVotingResponse](docs/ImageVotingsCreateImageVotingResponse.md)
+ - [ImageVotingsCreateImageVotingResponseImageVotingAspect](docs/ImageVotingsCreateImageVotingResponseImageVotingAspect.md)
+ - [ImageVotingsIndexImageVotingChoicesResponse](docs/ImageVotingsIndexImageVotingChoicesResponse.md)
+ - [ImageVotingsIndexImageVotingChoicesResponseImageVotingEntry](docs/ImageVotingsIndexImageVotingChoicesResponseImageVotingEntry.md)
+ - [ImageVotingsIndexImageVotingEntriesResponse](docs/ImageVotingsIndexImageVotingEntriesResponse.md)
+ - [ImageVotingsIndexImageVotingEntriesResponseUser](docs/ImageVotingsIndexImageVotingEntriesResponseUser.md)
+ - [ImageVotingsIndexImageVotingEntryImagesRequestBody](docs/ImageVotingsIndexImageVotingEntryImagesRequestBody.md)
+ - [ImageVotingsIndexImageVotingEntryImagesResponse](docs/ImageVotingsIndexImageVotingEntryImagesResponse.md)
+ - [ImageVotingsIndexImageVotingsResponse](docs/ImageVotingsIndexImageVotingsResponse.md)
+ - [ImageVotingsUnchooseImageVotingEntryRequestBody](docs/ImageVotingsUnchooseImageVotingEntryRequestBody.md)
+ - [ImageVotingsUpdateImageVotingEntryRequestBody](docs/ImageVotingsUpdateImageVotingEntryRequestBody.md)
+ - [ImageVotingsUpdateImageVotingRequestBody](docs/ImageVotingsUpdateImageVotingRequestBody.md)
+ - [ImageVotingsUpdateImageVotingRequestBodyImageVotingAspect](docs/ImageVotingsUpdateImageVotingRequestBodyImageVotingAspect.md)
+ - [ImageVotingsUploadImageVotingEntryImageResponse](docs/ImageVotingsUploadImageVotingEntryImageResponse.md)
+ - [ImageVotingsViewImageVotingChoiceResponse](docs/ImageVotingsViewImageVotingChoiceResponse.md)
+ - [ImageVotingsViewImageVotingChoiceResponseImageVoting](docs/ImageVotingsViewImageVotingChoiceResponseImageVoting.md)
+ - [ImageVotingsViewImageVotingChoiceResponseImageVotingAspect](docs/ImageVotingsViewImageVotingChoiceResponseImageVotingAspect.md)
+ - [ImageVotingsViewImageVotingChoiceResponseImageVotingEntry](docs/ImageVotingsViewImageVotingChoiceResponseImageVotingEntry.md)
+ - [ImageVotingsViewImageVotingChoiceResponseImageVotingEntryUser](docs/ImageVotingsViewImageVotingChoiceResponseImageVotingEntryUser.md)
+ - [ImageVotingsViewImageVotingEntryResponse](docs/ImageVotingsViewImageVotingEntryResponse.md)
+ - [ImageVotingsViewImageVotingEntryResponseUser](docs/ImageVotingsViewImageVotingEntryResponseUser.md)
+ - [ImageVotingsViewImageVotingResponse](docs/ImageVotingsViewImageVotingResponse.md)
+ - [ImageVotingsViewImageVotingResponseImageVotingAspect](docs/ImageVotingsViewImageVotingResponseImageVotingAspect.md)
+ - [ImageVotingsViewImageVotingResultsResponse](docs/ImageVotingsViewImageVotingResultsResponse.md)
+ - [ImageVotingsViewImageVotingResultsResponseEntry](docs/ImageVotingsViewImageVotingResultsResponseEntry.md)
+ - [ImageVotingsViewImageVotingResultsResponseEntryAspect](docs/ImageVotingsViewImageVotingResultsResponseEntryAspect.md)
  - [ImportCreateImportKeyRequestBody](docs/ImportCreateImportKeyRequestBody.md)
  - [ImportCreateImportKeyResponse](docs/ImportCreateImportKeyResponse.md)
  - [ImportImportGradesRequestBody](docs/ImportImportGradesRequestBody.md)
@@ -130,6 +181,7 @@ Class | Method | HTTP request | Description
  - [ShopCreateProductResponseInput](docs/ShopCreateProductResponseInput.md)
  - [ShopCreateQrCodeRequestBody](docs/ShopCreateQrCodeRequestBody.md)
  - [ShopCreateQrCodeResponse](docs/ShopCreateQrCodeResponse.md)
+ - [ShopIndexLoloRequestCreatedNotifiersResponse](docs/ShopIndexLoloRequestCreatedNotifiersResponse.md)
  - [ShopIndexLoloRequestsResponse](docs/ShopIndexLoloRequestsResponse.md)
  - [ShopIndexLolosResponse](docs/ShopIndexLolosResponse.md)
  - [ShopIndexOwnLoloRequestsResponse](docs/ShopIndexOwnLoloRequestsResponse.md)
@@ -145,6 +197,7 @@ Class | Method | HTTP request | Description
  - [ShopIndexProductsResponse](docs/ShopIndexProductsResponse.md)
  - [ShopIndexQrCodesResponse](docs/ShopIndexQrCodesResponse.md)
  - [ShopOverruleLoloRequestRequestBody](docs/ShopOverruleLoloRequestRequestBody.md)
+ - [ShopUpdateLoloRequestCreatedNotifiersRequestBody](docs/ShopUpdateLoloRequestCreatedNotifiersRequestBody.md)
  - [ShopUpdateLoloRequestRequestBody](docs/ShopUpdateLoloRequestRequestBody.md)
  - [ShopUpdateOwnedItemRequestBody](docs/ShopUpdateOwnedItemRequestBody.md)
  - [ShopUpdateProductRequestBody](docs/ShopUpdateProductRequestBody.md)

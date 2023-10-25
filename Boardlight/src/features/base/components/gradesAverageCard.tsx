@@ -17,8 +17,14 @@ export const GradesAverageCard = (): JSX.Element => {
     const average = useMemo(() => {
         if (grades.data) {
             return (
-                grades.data.flatMap((s) => s.grades).reduce((acc, grade) => acc + grade.gradeValue * grade.weight, 0) /
-                grades.data.flatMap((s) => s.grades).reduce((acc, grade) => acc + grade.weight, 0)
+                grades.data
+                    .flatMap((s) => s.grades)
+                    .filter((g) => g.gradeValue !== 0)
+                    .reduce((acc, grade) => acc + grade.gradeValue * grade.weight, 0) /
+                grades.data
+                    .flatMap((s) => s.grades)
+                    .filter((g) => g.gradeValue !== 0)
+                    .reduce((acc, grade) => acc + grade.weight, 0)
             );
         }
         return 0;
@@ -71,7 +77,7 @@ export const GradesAverageCard = (): JSX.Element => {
                         roundCaps={true}
                         label={
                             <Text size="sm" align="center" weight={500}>
-                                {average.toFixed(2)}
+                                {isNaN(average) ? "-" : average.toFixed(2)}
                             </Text>
                         }
                         sx={{ alignSelf: "center" }}

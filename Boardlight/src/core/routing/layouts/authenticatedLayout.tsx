@@ -28,7 +28,6 @@ import {
     IconChevronDown,
     IconInfoCircle,
     IconInfoSquareRounded,
-    IconKey,
     IconLogout,
     IconMail,
     IconPackages,
@@ -204,21 +203,6 @@ const UserInformationModal = ({ opened, close }: { opened: boolean; close(): voi
                         </Badge>
                     ))}
                 </Group>
-            </Paper>
-            <Paper p="xs" className={classes.avatarSectionContainer} mt="sm">
-                <Stack>
-                    <Group position="center" spacing={rem(2)}>
-                        <IconKey stroke={1.5} size={20} />
-                        <Text align="center">Jogosultságok</Text>
-                    </Group>
-                    <Group spacing="xs" position="center">
-                        {control.data.permissions.map((userGroup) => (
-                            <Badge key={userGroup} variant="filled">
-                                {userGroup}
-                            </Badge>
-                        ))}
-                    </Group>
-                </Stack>
             </Paper>
         </Modal>
     );
@@ -424,7 +408,7 @@ const AuthenticatedHeader = ({ links, toggleDrawer }: AuthenticatedHeaderProps) 
         <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }}>
             <Container className={classes.content} fluid={true}>
                 <Group>
-                    <Text size="xl" weight={700} variant="gradient">
+                    <Text component={Link} to="/" size="xl" weight={700} variant="gradient">
                         LovassyApp
                     </Text>
                 </Group>
@@ -542,6 +526,8 @@ const shopIndexPermissions = [
     "Shop.IndexOwnLoloRequests",
 ];
 
+const votingIndexPermissions = ["ImageVotings.IndexImageVotings", "ImageVotings.IndexActiveImageVotings"];
+
 const administratorIndexPermissions = [
     "Auth.IndexPermissions",
     "Auth.IndexUserGroups",
@@ -588,6 +574,23 @@ const links = [
                 link: "/shop/own-owned-items",
                 label: "Kincstár",
                 permissions: ["Shop.IndexOwnOwnedItems"],
+            },
+        ],
+    },
+    {
+        label: "Szavazó rendszer",
+        permissions: votingIndexPermissions,
+        features: ["ImageVotings"],
+        links: [
+            {
+                link: "/image-votings",
+                label: "Szavazások",
+                permissions: ["ImageVotings.IndexActiveImageVotings", "ImageVotings.IndexImageVotings"],
+            },
+            {
+                link: "/image-votings/manage",
+                label: "Szavazások kezelése",
+                permissions: ["ImageVotings.IndexImageVotings"],
             },
         ],
     },
