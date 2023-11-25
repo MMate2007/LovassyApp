@@ -8,5 +8,5 @@ services:
       - 443:443
       - 5279:5279
       - 5173:5173
-    environment:
-      - ./:/app
+    volumes:
+      - ./Boardlight/src:/app/Boardlight/src
