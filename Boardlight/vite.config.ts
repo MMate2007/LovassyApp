@@ -31,5 +31,8 @@ export default defineConfig(({ mode }) => {
         define: {
             "import.meta.env.PACKAGE_VERSION": JSON.stringify(packageJson.version),
         },
+        server: {
+            port: 80,
+        },
     };
 });

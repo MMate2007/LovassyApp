@@ -4,9 +4,6 @@ services:
       dockerfile: docker/Dockerfile.boardlight
     ports:
       - 80:80
-      - 443:443
-      - 5279:5279
-      - 5173:5173
     volumes:
       - ./Boardlight:/app
       - /app/node_modules
