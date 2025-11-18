@@ -3,6 +3,7 @@ RUN corepack enable pnpm
 WORKDIR /app
 COPY ./Boardlight/package.json /app/
 RUN pnpm install
+COPY ./openapi_dev /app/
 COPY ./Boardlight /app/
 WORKDIR /app/Boardlight
 EXPOSE 80
