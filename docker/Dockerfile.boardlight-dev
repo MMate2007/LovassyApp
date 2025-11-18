@@ -7,4 +7,4 @@ COPY ./openapi_dev /app/
 COPY ./Boardlight /app/
 WORKDIR /app/Boardlight
 EXPOSE 80
-CMD pnpm dev --host
+CMD pnpm install && pnpm dev --host
